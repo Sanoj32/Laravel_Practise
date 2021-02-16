@@ -15,10 +15,11 @@ class CreateCellUsersTable extends Migration
     {
         Schema::create('cell__users', function (Blueprint $table) {
             $table->id();
-            $table->foreign('serviceProvider')->references('id')->on('sercice_providers');
             $table->integer('number');
             $table->float('balance');
+            $table->unsignedBigInteger('provider');
             $table->timestamps();
+            $table->foreign('provider')->references('id')->on('service_providers');
         });
     }
 

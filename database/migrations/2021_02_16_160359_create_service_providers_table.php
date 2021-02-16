@@ -25,6 +25,7 @@ class CreateServiceProvidersTable extends Migration
             $table->string('android');
             $table->string('apple');
             $table->timestamps();
+
         });
     }
 
