@@ -10,4 +10,8 @@ class Cell_User extends Model
     {
         return $this->belongsTo(ServiceProvider::class,'provider');
     }
+    public function Transactions()
+    {
+        return $this->hasMany(Transaction::class);
+    }
 }

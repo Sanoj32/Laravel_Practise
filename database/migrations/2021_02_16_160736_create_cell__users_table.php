@@ -15,7 +15,7 @@ class CreateCellUsersTable extends Migration
     {
         Schema::create('cell__users', function (Blueprint $table) {
             $table->id();
-            $table->integer('number');
+            $table->integer('number')->unique();
             $table->float('balance');
             $table->unsignedBigInteger('provider');
             $table->timestamps();
