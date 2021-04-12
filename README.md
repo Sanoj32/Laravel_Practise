@@ -1,1 +1,1 @@
-Online Recharge Management System for OOAD Lab.
+Practise repo for various concepts in laravel
