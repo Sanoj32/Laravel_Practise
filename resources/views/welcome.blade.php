@@ -10,58 +10,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
 
         <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}">
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -79,22 +29,66 @@
                 </div>
             @endif
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+        </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+        <div class="wrapper">
+    <div class="container">
+        <form action="">
+            <h1>
+                <i class="fas fa-shipping-fast"></i>
+                Shipping Details
+            </h1>
+            <div class="name">
+                <div>
+                    <label for="f-name">First</label>
+                    <input type="text" name="f-name">
+                </div>
+                <div>
+                    <label for="l-name">Last</label>
+                    <input type="text" name="l-name">
                 </div>
             </div>
-        </div>
+            <div class="street">
+                <label for="name">Street</label>
+                <input type="text" name="address">
+            </div>
+            <div class="address-info">
+                <div>
+                    <label for="city">City</label>
+                    <input type="text" name="city">
+                </div>
+                <div>
+                    <label for="state">State</label>
+                    <input type="text" name="state">
+                </div>
+                <div>
+                    <label for="zip">Zip</label>
+                    <input type="text" name="zip">
+                </div>
+            </div>
+            <h1>
+                <i class="far fa-credit-card"></i> Payment Information
+            </h1>
+            <div class="cc-num">
+                <label for="card-num">Credit Card No.</label>
+                <input type="text" name="card-num">
+            </div>
+            <div class="cc-info">
+                <div>
+                    <label for="card-num">Exp</label>
+                    <input type="text" name="expire">
+                </div>
+                <div>
+                    <label for="card-num">CCV</label>
+                    <input type="text" name="security">
+                </div>
+            </div>
+            <div class="btns">
+                <button>Purchase</button>
+                <button>Back to cart</button>
+            </div>
+        </form>
+    </div>
+</div>
     </body>
 </html>
