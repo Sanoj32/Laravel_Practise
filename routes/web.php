@@ -18,6 +18,11 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::get('/test', 'HomeController@test')->middleware('test');
+
 Route::get('/pay', 'PayOrderController@store');
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/postcard', function () {
+
+});
